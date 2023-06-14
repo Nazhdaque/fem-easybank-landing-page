@@ -19,7 +19,7 @@ const observer = new ResizeObserver(masters => {
 });
 masters.forEach(master => observer.observe(master));
 
-// console.log(
-// 	"%cCoded by ✨Nazhdaque✨\nhttps://www.frontendmentor.io/profile/Nazhdaque",
-// 	"background: #222; color: chartreuse; font-size: 1.25rem"
-// );
+console.log(
+	"%cCoded by ✨Nazhdaque✨\nhttps://www.frontendmentor.io/profile/Nazhdaque",
+	"background: #222; color: chartreuse; font-size: 1.25rem"
+);
