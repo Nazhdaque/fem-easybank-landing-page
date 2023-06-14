@@ -1,0 +1,53 @@
+.social-links {
+	--size: clamp(1.313rem, -5vw + 3rem, 1.5rem);
+
+	display: flex;
+	gap: 0.85rem;
+}
+
+.social-link {
+	display: grid;
+	grid-template-columns: repeat(2, min-content);
+	place-items: center;
+	outline: none;
+}
+
+.social-link::before {
+	content: "";
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: var(--size);
+	aspect-ratio: 1;
+}
+
+.social-links > *:nth-child(1) > *::before {
+	background-image: url(/images/icon-facebook.svg);
+}
+.social-links > *:nth-child(1) > *:where(:hover, :focus-visible)::before {
+	background-image: url(/images/gradient/icon-facebook.svg);
+}
+.social-links > *:nth-child(2) > *::before {
+	background-image: url(/images/icon-youtube.svg);
+}
+.social-links > *:nth-child(2) > *:where(:hover, :focus-visible)::before {
+	background-image: url(/images/gradient/icon-youtube.svg);
+}
+.social-links > *:nth-child(3) > *::before {
+	background-image: url(/images/icon-twitter.svg);
+}
+.social-links > *:nth-child(3) > *:where(:hover, :focus-visible)::before {
+	background-image: url(/images/gradient/icon-twitter.svg);
+}
+.social-links > *:nth-child(4) > *::before {
+	background-image: url(/images/icon-pinterest.svg);
+}
+.social-links > *:nth-child(4) > *:where(:hover, :focus-visible)::before {
+	background-image: url(/images/gradient/icon-pinterest.svg);
+}
+.social-links > *:nth-child(5) > *::before {
+	background-image: url(/images/icon-instagram.svg);
+}
+.social-links > *:nth-child(5) > *:where(:hover, :focus-visible)::before {
+	background-image: url(/images/gradient/icon-instagram.svg);
+}

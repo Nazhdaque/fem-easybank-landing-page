@@ -1,0 +1,38 @@
+.main-footer {
+	background-color: var(--clr-primary-800-solid);
+	padding-block: 3rem;
+}
+
+.main-footer__group {
+	gap: var(--gap);
+	display: grid;
+	grid-template-columns: 1.25fr minmax(max-content, 1.75fr) minmax(
+			max-content,
+			2fr
+		);
+}
+
+.main-footer__item {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: var(--gap);
+}
+.main-footer__item:last-child {
+	align-items: end;
+}
+
+/* social links: components > social-links.css */
+
+.main-footer__nav-links {
+	color: var(--clr-neutral-300-solid);
+	columns: 2;
+	column-gap: 0;
+}
+.main-footer__nav-links > * + * {
+	margin-top: 0.85rem;
+}
+
+.main-footer__nav-link {
+	outline: none;
+}

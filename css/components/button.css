@@ -1,0 +1,25 @@
+.btn {
+	--bg-btn: linear-gradient(
+		to right,
+		var(--clr-primary-400-solid) 0%,
+		var(--clr-primary-300-solid) 34%,
+		var(--clr-primary-400-solid) 67%,
+		var(--clr-primary-300-solid) 100%
+	);
+
+	padding: 1em 2.5em;
+	color: var(--clr-neutral-100-solid);
+	background: var(--bg-btn);
+	background-size: 300% auto;
+	font-weight: var(--fw-bold);
+	border-radius: 100vw;
+	transition: background-position var(--time) ease-out,
+		filter var(--time) ease-out;
+}
+.btn:where(:focus, :hover) {
+	background-position: right center;
+	filter: brightness(1.25);
+}
+.btn:active {
+	filter: brightness(1);
+}

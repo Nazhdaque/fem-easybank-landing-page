@@ -1,0 +1,64 @@
+/* hero */
+.hero__group {
+	display: grid;
+	grid-template-columns: 1.333fr 2fr;
+}
+
+.hero__txt {
+	display: grid;
+	gap: 2rem;
+	place-items: start;
+	margin-block: 10rem;
+}
+
+.hero__img {
+	position: relative;
+}
+
+.hero__bg {
+	position: absolute;
+	top: -260px;
+	left: 10px;
+	width: max-content;
+	z-index: -1;
+}
+
+.hero__mockups {
+	position: absolute;
+	width: initial;
+	top: -120px;
+	left: 190px;
+}
+
+/* customer value proposition */
+.cvp-section {
+	--p-block-lg: 7rem;
+	--p-block-md: calc(var(--p-block-lg) / 2);
+
+	padding-block: var(--p-block-lg);
+	background-color: var(--clr-neutral-300-solid);
+}
+
+.cvp__group {
+	--ratio-4-3: calc((var(--max-content-width) / 7) * 4);
+	max-width: var(--ratio-4-3);
+}
+
+.cvp__text {
+	margin-block: 2rem 5rem;
+}
+
+/* articles */
+.articles-section {
+	margin-block: 5.5rem;
+}
+
+.articles-section__group {
+	display: grid;
+	gap: 3rem;
+}
+
+/* articles & cvp lists styles:
+	components > layout
+	components > cards 
+*/

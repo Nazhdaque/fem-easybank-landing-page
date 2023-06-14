@@ -1,0 +1,54 @@
+:root,
+::backdrop {
+	--max-content-width: 70rem; /* 72.5rem */
+	--gap: 1.75rem;
+	--width-4-fluid: min((var(--max-content-width) - var(--gap) * 3) / 4, 100%);
+
+	--clr-primary-800-solid: hsl(233, 26%, 24%);
+	--clr-primary-400-solid: hsl(136, 65%, 51%);
+	--clr-primary-300-solid: hsl(192, 70%, 51%);
+
+	--clr-primary-800-alpha: 233, 26%, 24%;
+	--clr-primary-300-alpha: 192, 70%, 51%;
+
+	--clr-neutral-400-solid: hsl(233, 8%, 62%);
+	--clr-neutral-300-solid: hsl(220, 16%, 96%);
+	--clr-neutral-200-solid: hsl(0, 0%, 98%);
+	--clr-neutral-100-solid: hsl(0, 0%, 100%);
+
+	--grd-primary: linear-gradient(
+		to right,
+		var(--clr-primary-400-solid) 0%,
+		var(--clr-primary-300-solid) 100%
+	);
+
+	--grd-diagonal: linear-gradient(
+		to right bottom,
+		var(--clr-primary-400-solid) 0%,
+		var(--clr-primary-300-solid) 100%
+	);
+
+	--grd-to-200: linear-gradient(
+		to right,
+		var(--clr-primary-400-solid) 0%,
+		var(--clr-primary-300-solid) 26%,
+		var(--clr-neutral-200-solid) 51%,
+		var(--clr-neutral-200-solid) 100%
+	);
+
+	--grd-to-800: linear-gradient(
+		to right,
+		var(--clr-primary-400-solid) 0%,
+		var(--clr-primary-300-solid) 26%,
+		var(--clr-primary-800-solid) 51%,
+		var(--clr-primary-800-solid) 100%
+	);
+
+	--logo-width: 9rem;
+	--header-p-block: 1rem;
+
+	--logo-height: calc((var(--logo-width) / 139) * 20);
+	--header-height: calc(var(--header-p-block) * 2 + var(--logo-height));
+
+	--time: 0.15s;
+}

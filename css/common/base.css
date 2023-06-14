@@ -1,0 +1,53 @@
+:where(*, *::before, *::after) {
+	box-sizing: border-box !important;
+	margin: 0;
+	padding: 0;
+}
+
+:where(img, picture, svg) {
+	width: 100%;
+	display: block;
+}
+
+:where(h1, h2, h3, h4) {
+	line-height: 1.2;
+	color: var(--clr-primary-800-solid);
+	font-weight: var(--fw-light);
+}
+
+:where(ul, ol) {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+button {
+	cursor: pointer;
+	font-size: inherit;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+*::selection {
+	background-color: hsl(var(--clr-primary-300-alpha), 0.15);
+}
+
+html, /* chrome needs this declaration */
+body {
+	overflow-x: hidden;
+}
+
+body {
+	font-family: var(--ff-primary);
+	font-weight: var(--fw-regular);
+	font-size: var(--fs-400);
+	color: var(--clr-neutral-400-solid);
+	line-height: var(--lh-regular);
+	background-color: var(--clr-neutral-200-solid);
+	min-height: 100vh;
+	min-height: 100dvh;
+}

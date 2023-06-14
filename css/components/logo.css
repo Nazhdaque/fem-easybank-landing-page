@@ -1,0 +1,9 @@
+.logo {
+	display: flex;
+	align-items: center;
+	position: relative;
+	aspect-ratio: 139 / 20;
+	min-width: var(--logo-width);
+	max-width: var(--logo-width);
+	outline: none;
+}

@@ -1,0 +1,81 @@
+.modal {
+	--bg-modal: var(--clr-neutral-100-solid);
+	--bg-link: linear-gradient(
+		to right,
+		var(--clr-primary-300-solid) 0%,
+		var(--clr-primary-400-solid) 20%,
+		var(--clr-primary-400-solid) 80%,
+		var(--clr-primary-300-solid) 100%
+	);
+	--mask: linear-gradient(
+		to right,
+		transparent 0%,
+		var(--bg-modal) 40%,
+		var(--bg-modal) 60%,
+		transparent 100%
+	);
+	--width: calc(100% - var(--gap) * 2);
+
+	border: none;
+	min-width: 100%;
+	background: transparent;
+}
+
+.modal::backdrop {
+	--backdrop: linear-gradient(
+		to top,
+		hsl(var(--clr-primary-800-alpha), 0) 0%,
+		hsl(var(--clr-primary-800-alpha), 100%) 100%
+	);
+
+	margin-top: calc(var(--header-height));
+	background: var(--backdrop);
+	opacity: 0.75;
+}
+
+/* nav links */
+.modal__nav {
+	background-color: var(--bg-modal);
+	border-radius: calc(var(--component-border-radius) * 0.75);
+	place-items: center;
+	border-radius: 0.25rem;
+	padding-block: 1rem;
+	width: var(--width);
+	margin: var(--gap) auto auto auto;
+}
+
+.modal__nav-link {
+	text-align: center;
+	display: block;
+	padding-block: 0.5rem;
+	font-size: var(--fs-500);
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	outline: none;
+	color: var(--clr-primary-800-solid);
+}
+
+.modal__nav-link:before,
+.modal__nav-link:after {
+	position: absolute;
+	content: "";
+	inset: 0;
+	z-index: -1;
+	transition: opacity 0.25s;
+}
+.modal__nav-link:before {
+	background: var(--bg-link);
+	opacity: 0;
+}
+.modal__nav-link:after {
+	background: var(--mask);
+}
+.modal__nav-link:where(:hover, :focus-visible):before {
+	opacity: 0.25;
+}
+
+/* --- */
+.proxy {
+	visibility: hidden;
+}

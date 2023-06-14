@@ -1,0 +1,26 @@
+/* general */
+.base-layout {
+	display: grid;
+	grid-template-rows: min-content 1fr min-content;
+}
+
+.limiter {
+	display: grid;
+	grid-template-columns: 1fr minmax(0, var(--max-content-width)) 1fr;
+	padding-inline: var(--gap);
+}
+.limiter > *:not(.grid-item-full-width) {
+	grid-column: 2;
+}
+
+/* cvp & articles lists */
+.flex-grid-4 {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--gap);
+}
+.flex-grid-4 > * {
+	flex: 1 1 var(--width-4-fluid);
+}
+/* last item width controlled by js ResizeObserver */

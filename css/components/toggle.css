@@ -1,0 +1,77 @@
+.toggle {
+	--thikness: 0.0625rem;
+	--multiplier: 5;
+	--time: 0.5s;
+	--rotate: 225deg;
+	--space: calc(var(--thikness) * var(--multiplier));
+	--transform: translateY(var(--space)) rotate(var(--rotate));
+	--rotate-neg: calc(var(--rotate) * -1);
+	--space-neg: calc(var(--space) * -1);
+	--transform-neg: translateY(var(--space-neg)) rotate(var(--rotate-neg));
+	--gradient: linear-gradient(
+		to right,
+		var(--clr-primary-800-solid) 0%,
+		var(--clr-primary-800-solid) 51%,
+		transparent 51%,
+		transparent 100%
+	);
+	--gradient-focus: linear-gradient(
+		to right,
+		var(--clr-primary-400-solid) 0%,
+		var(--clr-primary-300-solid) 51%,
+		transparent 51%,
+		transparent 100%
+	);
+	--radius: calc(var(--thikness) * 2);
+
+	height: 100%;
+	aspect-ratio: 1;
+	border-radius: var(--radius);
+	place-items: center;
+}
+.toggle:not(.active) {
+	display: none;
+}
+
+.toggle-img {
+	width: 100%;
+	height: var(--thikness);
+	border: none;
+	position: relative;
+	background: var(--gradient);
+	background-size: 300% auto;
+	transition: background-position var(--time);
+}
+.toggle-img::before,
+.toggle-img::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	transition: transform var(--time);
+	background: var(--clr-primary-800-solid);
+}
+.toggle-img::before {
+	inset: var(--space-neg) 0 0 0;
+}
+.toggle-img::after {
+	inset: var(--space) 0 0 0;
+}
+
+.toggle:where(:focus-visible) .toggle-img {
+	background: var(--gradient-focus);
+	background-size: 300% auto;
+}
+.toggle:where(:focus-visible) .toggle-img::before,
+.toggle:where(:focus-visible) .toggle-img::after {
+	background: var(--grd-primary);
+}
+.toggle.active .toggle-img {
+	background-position: right center;
+}
+.toggle.active .toggle-img::before {
+	transform: var(--transform);
+}
+.toggle.active .toggle-img::after {
+	transform: var(--transform-neg);
+}
