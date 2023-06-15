@@ -1,6 +1,6 @@
 .main-footer {
 	background-color: var(--clr-primary-800-solid);
-	padding-block: 3rem;
+	padding-block: var(--size-md);
 }
 
 .main-footer__group {

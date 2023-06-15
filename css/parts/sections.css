@@ -6,9 +6,9 @@
 
 .hero__txt {
 	display: grid;
-	gap: 2rem;
+	gap: calc(var(--size-xs) * 2);
 	place-items: start;
-	margin-block: 10rem;
+	margin-block: calc(var(--size-xs) * 10);
 }
 
 .hero__img {
@@ -32,10 +32,7 @@
 
 /* customer value proposition */
 .cvp-section {
-	--p-block-lg: 7rem;
-	--p-block-md: calc(var(--p-block-lg) / 2);
-
-	padding-block: var(--p-block-lg);
+	padding-block: var(--size-xl);
 	background-color: var(--clr-neutral-300-solid);
 }
 
@@ -45,17 +42,17 @@
 }
 
 .cvp__text {
-	margin-block: 2rem 5rem;
+	margin-block: calc(var(--size-xs) * 2) calc(var(--size-xs) * 5);
 }
 
 /* articles */
 .articles-section {
-	margin-block: 5.5rem;
+	padding-block: var(--size-xl);
 }
 
 .articles-section__group {
 	display: grid;
-	gap: 3rem;
+	gap: var(--size-md);
 }
 
 /* articles & cvp lists styles:

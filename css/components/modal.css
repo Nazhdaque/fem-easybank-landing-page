@@ -39,7 +39,7 @@
 	border-radius: calc(var(--component-border-radius) * 0.75);
 	place-items: center;
 	border-radius: 0.25rem;
-	padding-block: 1rem;
+	padding-block: var(--size-xs);
 	width: var(--width);
 	margin: var(--gap) auto auto auto;
 }

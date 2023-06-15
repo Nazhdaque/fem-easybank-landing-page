@@ -1,5 +1,5 @@
 .social-links {
-	--size: clamp(1.313rem, -5vw + 3rem, 1.5rem);
+	--size: clamp(1.313rem, -5vw + 3rem, var(--size-sm));
 
 	display: flex;
 	gap: 0.85rem;

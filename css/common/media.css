@@ -1,9 +1,9 @@
 @media (width <= 900px) {
 	.cvp-section {
-		padding-block: var(--p-block-md);
+		padding-block: var(--size-md);
 	}
 	.cvp__text {
-		margin-block: 1.5rem 3rem;
+		margin-block: var(--size-sm) var(--size-md);
 	}
 
 	.card-w-icon__img {
@@ -11,7 +11,7 @@
 	}
 
 	.articles-section__group {
-		gap: 1.5rem;
+		gap: var(--size-sm);
 	}
 
 	.main-footer__nav-links {
@@ -50,7 +50,7 @@
 
 @media (width<=768px) {
 	.hero__txt {
-		margin-block: 2rem 5rem;
+		margin-block: calc(var(--size-xs) * 2) calc(var(--size-xs) * 5);
 	}
 
 	.hero__bg {

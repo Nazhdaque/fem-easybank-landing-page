@@ -1,13 +1,13 @@
 /* cvp section */
 .card-w-icon {
 	display: grid;
-	gap: 1.5rem;
+	gap: var(--size-sm);
 	grid-template-rows: min-content min-content 1fr;
 }
 
 .card-w-icon__img {
-	max-width: 4.5rem;
-	margin-bottom: 1rem;
+	max-width: var(--size-lg);
+	margin-bottom: var(--size-xs);
 }
 
 /* articles section */

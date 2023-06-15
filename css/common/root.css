@@ -1,6 +1,6 @@
 :root,
 ::backdrop {
-	--max-content-width: 70rem; /* 72.5rem */
+	--max-content-width: 70rem;
 	--gap: 1.75rem;
 	--width-4-fluid: min((var(--max-content-width) - var(--gap) * 3) / 4, 100%);
 
@@ -44,8 +44,16 @@
 		var(--clr-primary-800-solid) 100%
 	);
 
-	--logo-width: 9rem;
-	--header-p-block: 1rem;
+	--size-2xl: 9rem;
+	--size-xl: 6rem;
+	--size-lg: 4.5rem;
+	--size-md: 3rem;
+	--size-sm: 1.5rem;
+	--size-xs: 1rem;
+	--size-2xs: 0.75rem;
+
+	--logo-width: var(--size-2xl);
+	--header-p-block: var(--size-xs);
 
 	--logo-height: calc((var(--logo-width) / 139) * 20);
 	--header-height: calc(var(--header-p-block) * 2 + var(--logo-height));

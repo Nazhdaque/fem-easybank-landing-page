@@ -2,6 +2,13 @@ import "./css/main.css";
 import { ToggleUrl } from "./js/toggle-url";
 import { MobileNav } from "./js/mobile-nav.js";
 
+const preloads = [...document.querySelectorAll(".preload")].reverse();
+const imgPreloader = () => {
+	preloads.forEach(preload => preload.focus());
+	preloads.pop().blur();
+};
+imgPreloader();
+
 const logos = document.querySelectorAll(".logo");
 const toggleLogo = new ToggleUrl();
 toggleLogo.init(logos, "logo", "gradient");
