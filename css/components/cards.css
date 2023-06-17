@@ -12,7 +12,7 @@
 
 /* articles section */
 .card-w-img {
-	--blur: 0.75rem;
+	--blur: var(--size-2xs);
 	--opacity: 0.125;
 	--percent: 105%;
 

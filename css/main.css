@@ -12,6 +12,7 @@
 @import url(./components/social-links.css) layer(components);
 @import url(./components/cards.css) layer(components);
 @import url(./components/modal.css) layer(components);
+@import url(./components/swiper.css) layer(components);
 
 @import url(./parts/header.css) layer(parts);
 @import url(./parts/sections.css) layer(parts);

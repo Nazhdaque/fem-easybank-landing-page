@@ -38,6 +38,7 @@
 
 .cvp__group {
 	--ratio-4-3: calc((var(--max-content-width) / 7) * 4);
+
 	max-width: var(--ratio-4-3);
 }
 
@@ -47,12 +48,14 @@
 
 /* articles */
 .articles-section {
-	padding-block: var(--size-xl);
+	--p-bottom: calc(var(--size-xl) - var(--gap));
+
+	padding-block: var(--size-xl) var(--p-bottom);
 }
 
 .articles-section__group {
 	display: grid;
-	gap: var(--size-md);
+	gap: calc(var(--size-md) - var(--gap));
 }
 
 /* articles & cvp lists styles:

@@ -1,0 +1,6 @@
+.swiper {
+	max-width: calc(100% + var(--gap) * 2);
+	padding: var(--gap) !important;
+	margin-inline: calc(var(--gap) * -2) !important;
+	place-self: center;
+}
