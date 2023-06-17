@@ -41,7 +41,7 @@ API.get("slider-data.json").then(data => {
 
 	data.forEach(entry => {
 		const { img: imgName, desc: alt, author, title, text } = entry;
-		const pathname = `/images/image-${imgName}.jpg`;
+		const pathname = `images/image-${imgName}.jpg`;
 
 		const template = (alt, pathname, author, title, text) => html`
 			<li class="swiper-slide">
