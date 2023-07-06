@@ -7,6 +7,7 @@
 :where(img, picture, svg) {
 	width: 100%;
 	display: block;
+	height: auto;
 }
 
 :where(h1, h2, h3, h4) {

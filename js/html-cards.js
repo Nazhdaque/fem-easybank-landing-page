@@ -19,7 +19,12 @@ const className = (index, lastItemIndex) => {
 
 const cvpCardTemplate = (title, text, pathname, className) => html`
 	<li class="card-w-icon md--place-items-c ${className}">
-		<img class="card-w-icon__img" src="${pathname}" alt="" />
+		<img
+			class="card-w-icon__img"
+			src="${pathname}"
+			width="72"
+			height="72"
+			alt="" />
 		<h3 class="title-sm card-w-icon__title">${title}</h3>
 		<p class="md--t-align-c">${text}</p>
 	</li>
