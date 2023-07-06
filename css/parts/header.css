@@ -48,7 +48,7 @@
 }
 
 /* --- */
-.headerPlaceholder {
+.header-placeholder {
 	max-height: 0;
 	overflow: hidden;
 	margin-bottom: var(--headerHeight);

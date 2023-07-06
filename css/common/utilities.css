@@ -1,3 +1,12 @@
+.root-scroller {
+	block-size: 100dvb;
+	scrollbar-gutter: stable both-edges;
+
+	&:has(dialog[open]:modal) {
+		overflow: hidden;
+	}
+}
+
 .sr-only,
 .sr-only-focusable:not(:focus):not(:focus-within) {
 	position: absolute;
@@ -28,6 +37,7 @@
 	background: var(--grd-to-200);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
+	background-clip: text;
 	background-size: 500% auto;
 	transition: all var(--time);
 	background-position: right 0%;

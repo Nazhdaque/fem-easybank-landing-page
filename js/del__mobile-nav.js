@@ -1,4 +1,6 @@
-import { TIMEOUTS } from "./timeouts.js";
+// --- legacy code --- disabled
+
+import { TIMEOUTS } from "./del__timeouts.js";
 
 export class MobileNav {
 	constructor() {

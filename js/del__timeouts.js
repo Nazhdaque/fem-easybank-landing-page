@@ -1,3 +1,5 @@
+// --- legacy code --- disabled
+
 export const TIMEOUTS = {
 	timeouts: [],
 	setTimeout: function (fn, delay) {
