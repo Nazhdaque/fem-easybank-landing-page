@@ -1,1 +1,0 @@
-const t=document.querySelectorAll(".master"),n=document.querySelectorAll(".slave"),c=new ResizeObserver(e=>{for(const[s,r]of e.entries()){const o=r.borderBoxSize[0].inlineSize;n[s].style.maxWidth=`${o}px`}});t.forEach(e=>c.observe(e));
