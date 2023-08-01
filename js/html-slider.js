@@ -5,7 +5,7 @@ const slider = document.querySelector(".swiper-wrapper");
 const slides = [];
 const API = new FetchWrapper("");
 
-const slideTemplate = (alt, pathname, author, title, text) => html`
+const template = (alt, pathname, author, title, text) => html`
 	<li class="swiper-slide">
 		<a class="card-w-img" href="#">
 			<img class="card-w-img__img" src="${pathname}" alt="${alt}" />
@@ -29,7 +29,7 @@ API.get("slider-data.json").then(data => {
 	data.forEach(entry => {
 		const { img: imgName, desc: alt, author, title, text } = entry;
 		const pathname = `images/image-${imgName}.jpg`;
-		const slide = slideTemplate(alt, pathname, author, title, text);
+		const slide = template(alt, pathname, author, title, text);
 		slides.push(slide);
 	});
 

@@ -1,23 +1,25 @@
 import { html, render } from "lit-html";
 import { FetchWrapper } from "./fetchwrapper.js";
+import { SizeSetter } from "./sizeSetter.js";
 
 const cardContainer = document.querySelector(".cvp-section");
 const cards = [];
 const API = new FetchWrapper("");
+const sizeSetter = new SizeSetter();
 
 const getSvgName = (string, index) => string.toLowerCase().split(" ")[index];
 const className = (index, lastItemIndex) => {
 	switch (index) {
 		case 0:
-			return "master";
+			return "master-1";
 		case lastItemIndex:
-			return "slave";
+			return "slave-1";
 		default:
 			return null;
 	}
 };
 
-const cvpCardTemplate = (title, text, pathname, className) => html`
+const template = (title, text, pathname, className) => html`
 	<li class="card-w-icon md--place-items-c ${className}">
 		<img
 			class="card-w-icon__img"
@@ -30,7 +32,7 @@ const cvpCardTemplate = (title, text, pathname, className) => html`
 	</li>
 `;
 
-const cvpCardsComponent = cards =>
+const component = cards =>
 	html`
 		<ul class="flex-grid-4">
 			${cards}
@@ -45,7 +47,7 @@ API.get("cvp-cards-data.json").then(data => {
 			title,
 			index === 0 ? 0 : 1
 		)}.svg`;
-		const card = cvpCardTemplate(
+		const card = template(
 			title,
 			text,
 			pathname,
@@ -54,7 +56,7 @@ API.get("cvp-cards-data.json").then(data => {
 		cards.push(card);
 	});
 
-	render(cvpCardsComponent(cards), cardContainer);
-	// ---
-	import("./widthSetter.js").then(data => data);
+	render(component(cards), cardContainer);
+
+	sizeSetter.initWith([["master-1", "slave-1"]]);
 });
