@@ -1,11 +1,11 @@
-.root-scroller {
+/* .root-scroller {
 	block-size: 100dvb;
 	scrollbar-gutter: stable both-edges;
 
 	&:has(dialog[open]:modal) {
 		overflow: hidden;
 	}
-}
+} */
 
 .sr-only,
 .sr-only-focusable:not(:focus):not(:focus-within) {
